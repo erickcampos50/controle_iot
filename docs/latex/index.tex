@@ -1,0 +1,314 @@
+\section*{P\+R\+O\+V\+I\+SÓ\+R\+IO}
+
+\href{https://travis-ci.org/marcoschwartz/aREST}{\tt } \href{#backers}{\tt } \href{#sponsors}{\tt } \href{https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3Q73345CWMYE8}{\tt }
+
+\subsection*{Overview}
+
+A simple library that implements a R\+E\+ST A\+PI for Arduino \& the E\+S\+P8266 Wi\+Fi chip.
+
+It is designed to be universal and currently supports R\+E\+ST calls via H\+T\+TP (using the C\+C3000 Wi\+Fi chip, the Arduino Wi\+Fi library or the Ethernet shield), via the Serial port (using the U\+SB serial connection, Bluetooth, and X\+Bee) and also via Bluetooth Low Energy. The library is also compatible with the Arduino M\+K\+R1000 board.
+
+It also works with the E\+S\+P8266 Wi\+Fi chip using the E\+S\+P8266 processor, therefore working as an independent unit. It also works on the E\+S\+P32 Wi\+Fi chip.
+
+Boards running a\+R\+E\+ST can also be accessed from anywhere in the world via an A\+PI available at {\ttfamily cloud.\+arest.\+io}. Check the rest of this file and the examples ending with $\ast$\+\_\+cloud$\ast$ for more details. This currently only works with the Ethernet library for Arduino \& the E\+S\+P8266 Wi\+Fi chip.
+
+If you want to know more about a\+R\+E\+ST, go over to \href{http://arest.io/}{\tt http\+://arest.\+io/}.
+
+\subsection*{Contents}
+
+
+\begin{DoxyItemize}
+\item a\+R\+E\+S\+T.\+h\+: the library file.
+\item examples\+: several examples using the a\+R\+E\+ST library
+\item test\+: unit tests of the library
+\end{DoxyItemize}
+
+\subsection*{Supported hardware}
+
+\subsubsection*{Arduino/\+Genuino Boards}
+
+The library is at the moment compatible with the following Arduino boards\+: Uno, Mega, Due, Yun and Teensy 3.\+x. It is also compatible with the Arduino/\+Genuino M\+K\+R1000 board.
+
+\subsubsection*{E\+S\+P8266/\+E\+S\+P32}
+
+The library is compatible with most of the E\+S\+P8266 modules \& E\+S\+P8266 development boards, as well as most boards based on the E\+S\+P32 Wi\+Fi chip.
+
+\subsubsection*{H\+T\+TP}
+
+For H\+T\+TP communications, the library is compatible with most C\+C3000 breakout boards, and was tested with the Adafruit C\+C3000 breakout board and the C\+C3000 Wi\+Fi shield. It was also tested with the Tiny Circuit Wi\+Fi shield (but in that case, you will have to change the pins configuration inside the example Wi\+Fi sketch. See the Tiny Circuit Wi\+Fi shield documentation for more details). The library is also compatible with the official Arduino Ethernet shield, with the official Arduino Wi\+Fi shield, and with the Arduino Yun via the embedded Wi\+Fi connection.
+
+\subsubsection*{Serial}
+
+For Serial communications, the library has been tested with the direct U\+SB serial connection on an Arduino Uno board, with the Adafruit Blue\+Fruit E\+Z-\/\+Link Bluetooth module, and with X\+Bee Series 1 devices.
+
+\subsubsection*{Bluetooth LE}
+
+For Bluetooth Low Energy communications, the library has been tested with the Adafruit B\+LE n\+R\+F8001 breakout board.
+
+\subsection*{Requirements}
+
+To use the library with Arduino boards you will need the latest version of the Arduino I\+DE\+:
+
+
+\begin{DoxyItemize}
+\item \href{http://arduino.cc/en/main/software}{\tt Arduino I\+DE 1.\+8.\+5}
+\end{DoxyItemize}
+
+\subsubsection*{For Wi\+Fi using the E\+S\+P8266 chip}
+
+To use the library with the E\+S\+P8266 Wi\+Fi chip you will need to install the required module from the Boards Manager of the Arduino I\+DE. These are the steps to install the E\+S\+P8266 package inside the Arduino I\+DE\+:
+
+
+\begin{DoxyEnumerate}
+\item Start the Arduino I\+DE and open the Preferences window
+\item Enter {\ttfamily \href{http://arduino.esp8266.com/stable/package_esp8266com_index.json}{\tt http\+://arduino.\+esp8266.\+com/stable/package\+\_\+esp8266com\+\_\+index.\+json}} into the Additional Board Manager U\+R\+Ls field. You can add multiple U\+R\+Ls, separating them with commas.
+\item Open the Boards Manager from Tools $>$ Board menu and install the esp8266 package (and after that don\textquotesingle{}t forget to select your E\+S\+P8266 board from Tools $>$ Board menu).
+\end{DoxyEnumerate}
+
+\subsubsection*{For Wi\+Fi using the E\+S\+P32 chip}
+
+To use the library with the E\+S\+P32 Wi\+Fi chip you will need to install the board definitions for the Arduino I\+DE. These are the steps to install support for the E\+S\+P32 chip inside the Arduino I\+DE\+:
+
+
+\begin{DoxyEnumerate}
+\item Follow the install instructions from \href{https://github.com/espressif/arduino-esp32}{\tt https\+://github.\+com/espressif/arduino-\/esp32}
+\item Restart the Arduino I\+DE
+\item Select your E\+S\+P32 board from Tools $>$ Board menu.
+\end{DoxyEnumerate}
+
+\subsubsection*{For Wi\+Fi using the C\+C3000 chip}
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/adafruit/Adafruit_CC3000_Library}{\tt Adafruit C\+C3000 Library}
+\item \href{https://github.com/adafruit/CC3000_MDNS}{\tt Adafruit M\+D\+NS Library}
+\item M\+D\+NS support in your operating system\+:
+\begin{DoxyItemize}
+\item For OS X it is supported through Bonjour, you don\textquotesingle{}t have anything to install.
+\item For Linux, you need to install \href{http://avahi.org/}{\tt Avahi}.
+\item For Windows, you need to install \href{http://www.apple.com/support/bonjour/}{\tt Bonjour}.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsubsection*{For Wi\+Fi using the M\+K\+R1000 Board}
+
+To use a\+R\+E\+ST with the M\+K\+R1000 board, you first need to install the M\+K\+R1000 board definition from the Arduino I\+DE board manager. You also need to install the following library\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/arduino-libraries/WiFi101}{\tt Wi\+Fi 101 Library}
+\end{DoxyItemize}
+
+\subsubsection*{For Bluetooth Low Energy}
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/adafruit/Adafruit_nRF8001}{\tt Adafruit n\+R\+F8001 Library}
+\end{DoxyItemize}
+
+\subsubsection*{For Cloud Access}
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/knolleary/pubsubclient}{\tt Pub\+Sub Library}
+\end{DoxyItemize}
+
+\subsection*{Setup}
+
+To install the library, simply clone this repository in the /libraries folder of your Arduino folder.
+
+\subsection*{Quick test (Wi\+Fi)}
+
+
+\begin{DoxyEnumerate}
+\item Connect a L\+ED \& resistor to pin number 8 of your Arduino board
+\item Open the Wi\+Fi\+\_\+\+C\+C3000 example sketch and modify the Wi\+Fi S\+S\+ID, password \& security
+\item Upload the sketch
+\item Go to a web browser and type {\ttfamily arduino.\+local/mode/8/o} to set the pin as an output
+\item Now type {\ttfamily arduino.\+local/digital/8/1} and the L\+ED should turn on
+\end{DoxyEnumerate}
+
+\subsection*{Quick test (Ethernet)}
+
+
+\begin{DoxyEnumerate}
+\item Connect a L\+ED \& resistor to pin number 8 of your Arduino board
+\item Make sure your computer is connected via Ethernet to the board and has the IP address 192.\+168.\+2.\+x
+\item Upload the sketch
+\item Go to a web browser and type {\ttfamily 192.\+168.\+2.\+2/mode/8/o} to set the pin as an output
+\item Now type {\ttfamily 192.\+168.\+2.\+2/digital/8/1} and the L\+ED should turn on
+\end{DoxyEnumerate}
+
+\subsection*{Quick test (Serial)}
+
+
+\begin{DoxyEnumerate}
+\item Connect a L\+ED \& resistor to pin number 8 of your Arduino board
+\item Open the Serial example sketch
+\item Upload the sketch
+\item Go to a the Serial monitor and set the options to \char`\"{}\+B\+O\+T\+H N\+L \& C\+R\char`\"{} and \char`\"{}115200 bauds\char`\"{}
+\item Type {\ttfamily /mode/8/o} to set the pin as an output
+\item Now type {\ttfamily /digital/8/1} and the L\+ED should turn on
+\end{DoxyEnumerate}
+
+\subsection*{Quick test (B\+LE)}
+
+
+\begin{DoxyEnumerate}
+\item Connect a L\+ED \& resistor to pin number 8 of your Arduino board
+\item Open the B\+LE example sketch
+\item Upload the sketch
+\item Use the \href{https://itunes.apple.com/fr/app/adafruit-bluefruit-le-connect/id830125974?mt=8}{\tt Blue\+Fruit LE Connect app} to connect to the B\+LE chip
+\item Type {\ttfamily /mode/8/o /} to set the pin as an output
+\item Now type {\ttfamily /digital/8/1 /} and the L\+ED should turn on
+\end{DoxyEnumerate}
+
+\subsection*{Quick test (E\+S\+P8266/\+E\+S\+P32)}
+
+
+\begin{DoxyEnumerate}
+\item Connect a L\+ED \& resistor to pin number 5 of your E\+S\+P8266/\+E\+S\+P32 board
+\item Open the E\+S\+P8266/\+E\+S\+P32 example sketch and modify the Wi\+Fi S\+S\+ID \& password
+\item Upload the sketch
+\item Open the Serial monitor to get the IP address of the board, for example 192.\+168.\+1.\+103
+\item Go to a web browser and type {\ttfamily 192.\+168.\+1.\+103/mode/5/o} to set the pin as an output
+\item Now type {\ttfamily 192.\+168.\+1.\+103/digital/5/1} and the L\+ED should turn on
+\end{DoxyEnumerate}
+
+\subsection*{Cloud Access (Ethernet)}
+
+
+\begin{DoxyEnumerate}
+\item Connect a L\+ED \& resistor to pin number 8 of your Arduino board
+\item Open the Ethernet\+\_\+cloud example sketch and modify the M\+AC address, and also give a unique ID to your project, for example 47fd9g
+\item Make sure your shield is connected to the web via an Ethernet cable
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Upload the sketch to the board
+\item Go to a web browser and type {\ttfamily cloud.\+arest.\+io/47fd9g/mode/8/o} to set the pin as an output
+\item Now type {\ttfamily cloud.\+arest.\+io/47fd9g/digital/8/1} and the L\+ED should turn on
+\end{DoxyEnumerate}
+
+\subsection*{Cloud Access (E\+S\+P8266)}
+
+
+\begin{DoxyEnumerate}
+\item Connect a L\+ED \& resistor to pin number 5 of your E\+S\+P8266 board
+\item Open the E\+S\+P8266\+\_\+cloud example sketch and modify the Wi\+Fi S\+S\+ID \& password, and also give a unique ID to your project, for example 47fd9g
+\item Upload the sketch to the board
+\item Go to a web browser and type {\ttfamily cloud.\+arest.\+io/47fd9g/mode/5/o} to set the pin as an output
+\item Now type {\ttfamily cloud.\+arest.\+io/47fd9g/digital/5/1} and the L\+ED should turn on
+\end{DoxyEnumerate}
+
+\subsection*{A\+PI documentation}
+
+The A\+PI currently supports five type of commands\+: digital, analog, and mode, variables, and user-\/defined functions.
+
+\subsubsection*{Digital}
+
+Digital is to write or read on digital pins on the Arduino. For example\+:
+\begin{DoxyItemize}
+\item {\ttfamily /digital/8/0} sets pin number 8 to a low state
+\item {\ttfamily /digital/8/1} sets pin number 8 to a high state
+\item {\ttfamily /digital/8} reads value from pin number 8 in J\+S\+ON format (note that for compatibility reasons, {\ttfamily /digital/8/r} produces the same result)
+\end{DoxyItemize}
+
+\subsubsection*{Analog}
+
+Analog is to write or read on analog pins on the Arduino. Note that you can only write on P\+WM pins for the Arduino Uno, and only read analog values from analog pins 0 to 5. For example\+:
+\begin{DoxyItemize}
+\item {\ttfamily /analog/6/123} sets pin number 6 to 123 using P\+WM
+\item {\ttfamily /analog/0} returns analog value from pin number A0 in J\+S\+ON format (note that for compatibility reasons, {\ttfamily /analog/0/r} produces the same result)
+\end{DoxyItemize}
+
+\subsubsection*{Mode}
+
+Mode is to change the mode on a pin. For example\+:
+\begin{DoxyItemize}
+\item {\ttfamily /mode/8/o} sets pin number 8 as an output
+\item {\ttfamily /mode/8/i} sets pin number 8 as an input
+\end{DoxyItemize}
+
+\subsubsection*{Variables}
+
+You can also directly call variables that are defined in your sketch. Integer variables are supported by the library. Float and String variables are also supported, but only by the Arduino Mega board \& by the E\+S\+P8266.
+
+To access a variable in your sketch, you have to declare it first, and then call it from with a R\+E\+ST call. For example, if your a\+R\+E\+ST instance is called \char`\"{}rest\char`\"{} and the variable \char`\"{}temperature\char`\"{}\+:
+\begin{DoxyItemize}
+\item {\ttfamily rest.\+variable(\char`\"{}temperature\char`\"{},\&temperature);} declares the temperature in the Arduino sketch
+\item {\ttfamily /temperature} returns the value of the variable in J\+S\+ON format
+\end{DoxyItemize}
+
+\subsubsection*{Functions}
+
+You can also define your own functions in your sketch that can be called using the R\+E\+ST A\+PI. To access a function defined in your sketch, you have to declare it first, and then call it from with a R\+E\+ST call. Note that all functions needs to take a String as the unique argument (for parameters to be passed to the function) and return an integer. For example, if your a\+R\+E\+ST instance is called \char`\"{}rest\char`\"{} and the function \char`\"{}led\+Control\char`\"{}\+:
+\begin{DoxyItemize}
+\item {\ttfamily rest.\+function(\char`\"{}led\char`\"{},led\+Control);} declares the function in the Arduino sketch
+\item {\ttfamily /led?params=0} executes the function
+\end{DoxyItemize}
+
+\subsubsection*{Log data to the cloud}
+
+You can also directly tell your board to log data on our cloud server, to be stored there \& retrieved later or displayed on the \href{https://dashboard.arest.io/}{\tt a\+R\+E\+ST cloud dashboard}. This is useful when you want for example to record the data coming from a sensor at regular intervals. The data is then stored along with the current date, the ID of the device sending the data, and also an event name that is used to identifiy the data. This can be done via the following commands\+:
+\begin{DoxyItemize}
+\item {\ttfamily rest.\+publish(client, \char`\"{}temperature\char`\"{}, data);} logs the value of {\ttfamily data} with the event name {\ttfamily temperature}
+\item {\ttfamily \href{https://cloud.arest.io/47fd9g/events}{\tt https\+://cloud.\+arest.\+io/47fd9g/events}} retrieves the last events logged by the device {\ttfamily 47fd9g}
+\item You can also use the \href{https://dashboard.arest.io/}{\tt a\+R\+E\+ST cloud dashboard} to then display or plot this data in real-\/time on your dashboards
+\item Note that for devices not protected by an A\+PI key, the server will only store the last 10 measurements
+\end{DoxyItemize}
+
+\subsubsection*{Get data about the board}
+
+You can also access a description of all the variables that were declared on the board with a single command. This is useful to automatically build graphical interfaces based on the variables exposed to the A\+PI. This can be done via the following calls\+:
+\begin{DoxyItemize}
+\item {\ttfamily /} or {\ttfamily /id}
+\item The names \& types of the variables will then be stored in the variables field of the returned J\+S\+ON object
+\end{DoxyItemize}
+
+\subsubsection*{Status L\+ED (B\+E\+TA)}
+
+To know the activity of the library while the sketch is running, there is the possibility to connect a L\+ED to a pin to show this activity in real-\/time. Simply connect a 220 Ohm resistor in series with a 5mm L\+ED to the pin of your choice, and enter this line in the \hyperlink{nodemcu_8cpp_a7dfd9b79bc5a37d7df40207afbc5431f}{setup()} function of your Arduino sketch\+:
+
+
+\begin{DoxyCode}
+\hyperlink{nodemcu_8cpp_a26fae33ed4ee26417d9384858ac417f7}{rest}.set\_status\_led(led\_pin);
+\end{DoxyCode}
+
+
+\subsubsection*{Lightweight mode (B\+E\+TA)}
+
+There is the possibility to use a lightweight mode for a\+R\+E\+ST. This means that for commands to control the Arduino board (like digital\+Write commands), no data is returned at all. For commands that ask for data to be sent back (like asking for a variable), in this mode the library will only return the value of the data that was requested.
+
+This mode was made for cases where the memory footprint of the a\+R\+E\+ST library has to be as small as possible, or with devices that can\textquotesingle{}t send/receive a lot of data at the same time, like Bluetooth LE. To enable this lightweight mode, simply start your sketch with\+:
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#define LIGHTWEIGHT 1}
+\end{DoxyCode}
+
+
+\subsection*{Troubleshooting}
+
+In case you cannot access your Arduino board via the C\+C3000 m\+D\+NS service (by typing arduino.\+local in your browser), you need to get the IP address of the board. Upload the sketch to the Arduino board, and then open the Serial monitor. The IP address of the board should be printed out. Simply copy it on a web browser, and you can make R\+E\+ST call like\+:
+
+
+\begin{DoxyCode}
+192.168.1.104/digital/8/1
+\end{DoxyCode}
+
+
+\subsection*{Contributors}
+
+This project exists thanks to all the people who contribute. \mbox{[}Contribute\mbox{]}. \href{graphs/contributors}{\tt }
+
+\subsection*{Backers}
+
+Thank you to all our backers! 🙏 \mbox{[}\href{https://opencollective.com/arest#backer}{\tt Become a backer}\mbox{]}
+
+\href{https://opencollective.com/arest#backers}{\tt }
+
+\subsection*{Sponsors}
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. \mbox{[}\href{https://opencollective.com/arest#sponsor}{\tt Become a sponsor}\mbox{]}
+
+\href{https://opencollective.com/arest/sponsor/0/website}{\tt } \href{https://opencollective.com/arest/sponsor/1/website}{\tt } \href{https://opencollective.com/arest/sponsor/2/website}{\tt } \href{https://opencollective.com/arest/sponsor/3/website}{\tt } \href{https://opencollective.com/arest/sponsor/4/website}{\tt } \href{https://opencollective.com/arest/sponsor/5/website}{\tt } \href{https://opencollective.com/arest/sponsor/6/website}{\tt } \href{https://opencollective.com/arest/sponsor/7/website}{\tt } \href{https://opencollective.com/arest/sponsor/8/website}{\tt } \href{https://opencollective.com/arest/sponsor/9/website}{\tt } 

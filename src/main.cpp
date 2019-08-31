@@ -8,13 +8,12 @@
  * @copyright Copyright (c) 2019
  * 
  */
-
-#include <Arduino.h>
+#include <Arduino.h> 
 #include <WiFiClient.h>
 #include <WiFiManager.h>
 #include <ArduinoJson.h>
 #include <IRremoteESP8266.h>
-#include <aREST.h>
+#include <aREST.h> //Biblioteca aREST
 
 /**
  * @brief Função de configuração do código
