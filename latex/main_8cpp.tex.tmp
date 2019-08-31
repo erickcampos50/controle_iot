@@ -1,0 +1,58 @@
+\hypertarget{main_8cpp}{}\section{Referência ao ficheiro src/main.cpp}
+\label{main_8cpp}\index{src/main.\+cpp@{src/main.\+cpp}}
+
+
+Controle de condicionadores de ar.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Wi\+Fi\+Client.\+h$>$}\newline
+{\ttfamily \#include $<$Wi\+Fi\+Manager.\+h$>$}\newline
+{\ttfamily \#include $<$Arduino\+Json.\+h$>$}\newline
+{\ttfamily \#include $<$I\+Rremote\+E\+S\+P8266.\+h$>$}\newline
+{\ttfamily \#include $<$a\+R\+E\+S\+T.\+h$>$}\newline
+Diagrama de dependências de inclusão para main.\+cpp\+:
+% FIG 0
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup} ()
+\begin{DoxyCompactList}\small\item\em Função de configuração do código. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Controle de condicionadores de ar. 
+
+\begin{DoxyAuthor}{Autor}
+Erick Campos (\href{mailto:erickcampos50@gmail.com}{\tt erickcampos50@gmail.\+com}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Versão}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Data}
+2019-\/08-\/31
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{main_8cpp_afe461d27b9c48d5921c00d521181f12f}} 
+\index{main.\+cpp@{main.\+cpp}!loop@{loop}}
+\index{loop@{loop}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{main.\+cpp@{main.\+cpp}!setup@{setup}}
+\index{setup@{setup}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de configuração do código. 
+
