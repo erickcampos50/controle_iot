@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['esp_5freset',['esp_reset',['../nodemcu_8cpp.html#a67463813a20efaf8e23edba85ea0731f',1,'nodemcu.cpp']]],
-  ['espclient',['espClient',['../nodemcu_8cpp.html#abd77e757e4b3bb6f1e4b42b21ea9e040',1,'nodemcu.cpp']]]
+  ['device_5fid',['device_id',['../nodemcu_8cpp.html#aa64862d2b0d806d603b7775e9115527b',1,'nodemcu.cpp']]],
+  ['dumpacinfo',['dumpACInfo',['../nodemcu_8cpp.html#a7e714c21bbff9024151ee82a47b13f93',1,'nodemcu.cpp']]]
 ];

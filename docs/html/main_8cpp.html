@@ -64,7 +64,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">main.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -78,6 +79,8 @@ $(function() {
 <code>#include &lt;ArduinoJson.h&gt;</code><br />
 <code>#include &lt;IRremoteESP8266.h&gt;</code><br />
 <code>#include &lt;aREST.h&gt;</code><br />
+<code>#include &lt;IRsend.h&gt;</code><br />
+<code>#include &lt;ir_Samsung.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
@@ -87,11 +90,25 @@ Include dependency graph for main.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a2829fb8ef0a0e07e776d7647fb7dfec4"><td class="memItemLeft" align="right" valign="top">IRSamsungAc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a2829fb8ef0a0e07e776d7647fb7dfec4">ac</a> (<a class="el" href="main_8cpp.html#aff8547ab5c9372b7dc5c427310e4142b">kIrLed</a>)</td></tr>
+<tr class="separator:a2829fb8ef0a0e07e776d7647fb7dfec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aaf516d78b7caef2d2b9867b02542e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5aaf516d78b7caef2d2b9867b02542e7">printState</a> ()</td></tr>
+<tr class="memdesc:a5aaf516d78b7caef2d2b9867b02542e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the settings.  <a href="#a5aaf516d78b7caef2d2b9867b02542e7">More...</a><br /></td></tr>
+<tr class="separator:a5aaf516d78b7caef2d2b9867b02542e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2fd29d8395484d8aa53bfb2245063be"><td class="memItemLeft" align="right" valign="top">IRSamsungAc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad2fd29d8395484d8aa53bfb2245063be">ac</a> (4)</td></tr>
+<tr class="memdesc:ad2fd29d8395484d8aa53bfb2245063be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teste bobo 3.  <a href="#ad2fd29d8395484d8aa53bfb2245063be">More...</a><br /></td></tr>
+<tr class="separator:ad2fd29d8395484d8aa53bfb2245063be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fc01d736fe50cf5b977f755b675f11d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a> ()</td></tr>
 <tr class="memdesc:a4fc01d736fe50cf5b977f755b675f11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função de configuração do código.  <a href="#a4fc01d736fe50cf5b977f755b675f11d">More...</a><br /></td></tr>
 <tr class="separator:a4fc01d736fe50cf5b977f755b675f11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
+<tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função de repetição.  <a href="#afe461d27b9c48d5921c00d521181f12f">More...</a><br /></td></tr>
 <tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aff8547ab5c9372b7dc5c427310e4142b"><td class="memItemLeft" align="right" valign="top">const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aff8547ab5c9372b7dc5c427310e4142b">kIrLed</a> = 4</td></tr>
+<tr class="separator:aff8547ab5c9372b7dc5c427310e4142b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Controle de condicionadores de ar. </p>
@@ -100,6 +117,44 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>2019-08-31</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2019 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a2829fb8ef0a0e07e776d7647fb7dfec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2829fb8ef0a0e07e776d7647fb7dfec4">&#9670;&nbsp;</a></span>ac() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IRSamsungAc ac </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="main_8cpp.html#aff8547ab5c9372b7dc5c427310e4142b">kIrLed</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2fd29d8395484d8aa53bfb2245063be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2fd29d8395484d8aa53bfb2245063be">&#9670;&nbsp;</a></span>ac() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IRSamsungAc ac </td>
+          <td>(</td>
+          <td class="paramtype">4&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Teste bobo 3. </p>
+
+</div>
+</div>
 <a id="afe461d27b9c48d5921c00d521181f12f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe461d27b9c48d5921c00d521181f12f">&#9670;&nbsp;</a></span>loop()</h2>
 
@@ -114,6 +169,27 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Função de repetição. </p>
+
+</div>
+</div>
+<a id="a5aaf516d78b7caef2d2b9867b02542e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aaf516d78b7caef2d2b9867b02542e7">&#9670;&nbsp;</a></span>printState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Display the settings. </p>
 
 </div>
 </div>
@@ -134,6 +210,21 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Função de configuração do código. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aff8547ab5c9372b7dc5c427310e4142b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff8547ab5c9372b7dc5c427310e4142b">&#9670;&nbsp;</a></span>kIrLed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint16_t kIrLed = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -11,14 +11,27 @@ Controle de condicionadores de ar.
 {\ttfamily \#include $<$Arduino\+Json.\+h$>$}\newline
 {\ttfamily \#include $<$I\+Rremote\+E\+S\+P8266.\+h$>$}\newline
 {\ttfamily \#include $<$a\+R\+E\+S\+T.\+h$>$}\newline
+{\ttfamily \#include $<$I\+Rsend.\+h$>$}\newline
+{\ttfamily \#include $<$ir\+\_\+\+Samsung.\+h$>$}\newline
 Include dependency graph for main.\+cpp\+:
 % FIG 0
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+I\+R\+Samsung\+Ac \hyperlink{main_8cpp_a2829fb8ef0a0e07e776d7647fb7dfec4}{ac} (\hyperlink{main_8cpp_aff8547ab5c9372b7dc5c427310e4142b}{k\+Ir\+Led})
+\item 
+void \hyperlink{main_8cpp_a5aaf516d78b7caef2d2b9867b02542e7}{print\+State} ()
+\begin{DoxyCompactList}\small\item\em Display the settings. \end{DoxyCompactList}\item 
+I\+R\+Samsung\+Ac \hyperlink{main_8cpp_ad2fd29d8395484d8aa53bfb2245063be}{ac} (4)
+\begin{DoxyCompactList}\small\item\em Teste bobo 3. \end{DoxyCompactList}\item 
 void \hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup} ()
 \begin{DoxyCompactList}\small\item\em Função de configuração do código. \end{DoxyCompactList}\item 
 void \hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop} ()
+\begin{DoxyCompactList}\small\item\em Função de repetição. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint16\+\_\+t \hyperlink{main_8cpp_aff8547ab5c9372b7dc5c427310e4142b}{k\+Ir\+Led} = 4
 \end{DoxyCompactItemize}
 
 
@@ -40,11 +53,41 @@ Copyright (c) 2019
 
 
 \subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a2829fb8ef0a0e07e776d7647fb7dfec4}\label{main_8cpp_a2829fb8ef0a0e07e776d7647fb7dfec4}} 
+\index{main.\+cpp@{main.\+cpp}!ac@{ac}}
+\index{ac@{ac}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{ac()}{ac()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily I\+R\+Samsung\+Ac ac (\begin{DoxyParamCaption}\item[{\hyperlink{main_8cpp_aff8547ab5c9372b7dc5c427310e4142b}{k\+Ir\+Led}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_ad2fd29d8395484d8aa53bfb2245063be}\label{main_8cpp_ad2fd29d8395484d8aa53bfb2245063be}} 
+\index{main.\+cpp@{main.\+cpp}!ac@{ac}}
+\index{ac@{ac}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{ac()}{ac()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily I\+R\+Samsung\+Ac ac (\begin{DoxyParamCaption}\item[{4}]{ }\end{DoxyParamCaption})}
+
+
+
+Teste bobo 3. 
+
 \mbox{\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{main_8cpp_afe461d27b9c48d5921c00d521181f12f}} 
 \index{main.\+cpp@{main.\+cpp}!loop@{loop}}
 \index{loop@{loop}!main.\+cpp@{main.\+cpp}}
 \subsubsection{\texorpdfstring{loop()}{loop()}}
 {\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de repetição. 
+
+\mbox{\Hypertarget{main_8cpp_a5aaf516d78b7caef2d2b9867b02542e7}\label{main_8cpp_a5aaf516d78b7caef2d2b9867b02542e7}} 
+\index{main.\+cpp@{main.\+cpp}!print\+State@{print\+State}}
+\index{print\+State@{print\+State}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{print\+State()}{printState()}}
+{\footnotesize\ttfamily void print\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Display the settings. 
 
 \mbox{\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
 \index{main.\+cpp@{main.\+cpp}!setup@{setup}}
@@ -55,4 +98,13 @@ Copyright (c) 2019
 
 
 Função de configuração do código. 
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_aff8547ab5c9372b7dc5c427310e4142b}\label{main_8cpp_aff8547ab5c9372b7dc5c427310e4142b}} 
+\index{main.\+cpp@{main.\+cpp}!k\+Ir\+Led@{k\+Ir\+Led}}
+\index{k\+Ir\+Led@{k\+Ir\+Led}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{k\+Ir\+Led}{kIrLed}}
+{\footnotesize\ttfamily const uint16\+\_\+t k\+Ir\+Led = 4}
 

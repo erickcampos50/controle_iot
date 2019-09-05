@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['callback',['callback',['../nodemcu_8cpp.html#ac3a129f66dc859e2b7279565f4e1de78',1,'nodemcu.cpp']]],
-  ['client',['client',['../nodemcu_8cpp.html#aee63e84c606cfaefce454689113c636c',1,'nodemcu.cpp']]]
+  ['ac',['ac',['../main_8cpp.html#a2829fb8ef0a0e07e776d7647fb7dfec4',1,'ac(kIrLed):&#160;main.cpp'],['../main_8cpp.html#ad2fd29d8395484d8aa53bfb2245063be',1,'ac(4):&#160;main.cpp']]]
 ];

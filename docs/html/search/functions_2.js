@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['esp_5freset',['esp_reset',['../nodemcu_8cpp.html#a67463813a20efaf8e23edba85ea0731f',1,'nodemcu.cpp']]]
+  ['dumpacinfo',['dumpACInfo',['../nodemcu_8cpp.html#a7e714c21bbff9024151ee82a47b13f93',1,'nodemcu.cpp']]]
 ];
